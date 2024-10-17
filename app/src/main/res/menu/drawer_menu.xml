@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/create_note"
+        android:title="Créer une Note"/>
+    <item
+        android:id="@+id/view_notes"
+        android:title="Voir les Notes"/>
+    <item
+        android:id="@+id/about"
+        android:title="À Propos"/>
+</menu>
