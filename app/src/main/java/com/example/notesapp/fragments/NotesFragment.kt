@@ -13,7 +13,7 @@ import com.example.notesapp.adapters.MyAdapter
 class NotesFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: MyAdapter
-    private val notesList = listOf("Note 1", "Note 2", "Note 3") // Sample notes
+    private val notesList = mutableListOf("Note 1", "Note 2", "Note 3") // Sample notes
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,5 +28,13 @@ class NotesFragment : Fragment() {
         recyclerView.adapter = adapter
 
         return view
+    }
+    fun addNote(note: String) {
+        notesList.add(note)
+        updateAdapterData(notesList)
+    }
+    private fun updateAdapterData(list: List<String>){
+        adapter= MyAdapter(list)
+        recyclerView.adapter=adapter
     }
 }

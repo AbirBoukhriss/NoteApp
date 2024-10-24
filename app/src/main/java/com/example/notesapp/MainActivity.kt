@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import com.example.notesapp.adapters.MyAdapter
 import com.example.notesapp.fragments.AboutFragment
 import com.example.notesapp.fragments.CreateNoteFragment
 import com.example.notesapp.fragments.NotesFragment
@@ -15,6 +16,8 @@ import com.google.android.material.navigation.NavigationView
 // Main activity class for the application
 class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
+    private lateinit var adapter:MyAdapter
+    private val notesList=mutableListOf<String>()
 
     // Method called when the activity is created
     @SuppressLint("MissingInflatedId")
@@ -70,4 +73,6 @@ class MainActivity : AppCompatActivity() {
             true
         } ?: false
     }
+
+
 }
